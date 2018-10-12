@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
 
 <AnchorPane id="AnchorPane" prefHeight="153.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="ar.view.FXMLjanelaController">
    <children>
-      <Pane layoutX="14.0" layoutY="4.0" prefHeight="170.0" prefWidth="573.0" />
+      <Pane layoutX="14.0" layoutY="4.0" prefHeight="170.0" prefWidth="573.0">
+         <children>
+            <Button layoutX="403.0" layoutY="114.0" mnemonicParsing="false" text="Emitir Relatório" />
+            <Button layoutX="50.0" layoutY="114.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="79.0" text="Atualizar" />
+            <Button layoutX="405.0" layoutY="33.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="102.0" text="Reutilizar" />
+            <Label layoutX="14.0" layoutY="23.0" text="Quantidade Atual:" />
+            <Label layoutX="134.0" layoutY="24.0" text="variavel q vai receber quantidade" />
+            <Label layoutX="14.0" layoutY="56.0" text="Data:" />
+            <Label layoutX="50.0" layoutY="56.0" text="variavel q vai receber a data" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
