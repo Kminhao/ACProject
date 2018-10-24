@@ -7,7 +7,7 @@ import java.util.Date;
 
 
 public class Arduino {
-    private double peso;
+    private double litros;
     private Calendar calendario;
     private int hora;
     private int minuto;
@@ -17,7 +17,7 @@ public class Arduino {
     private String dataPorExtenso;
     
     public Arduino(double peso, Calendar data){
-        this.peso = peso;
+        this.litros = peso;
         this.calendario = data;
         this.dia = calendario.get(Calendar.DAY_OF_MONTH);
         this.mes = calendario.get(Calendar.MONTH);
