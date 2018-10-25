@@ -1,0 +1,49 @@
+
+
+int boia = 2;
+// Led verde
+int led_verde = 3;
+// Led vermelho
+int led_vermelho = 4;
+// Rele
+int rele = 5;
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(boia, INPUT);
+  pinMode(led_verde, OUTPUT);
+  pinMode(led_vermelho, OUTPUT);
+  pinMode(rele, OUTPUT);
+  // deixa a bomba desligada
+  digitalWrite(rele, HIGH);
+}
+void loop()
+{
+  int estado = digitalRead(boia);
+  Serial.print("Leitura do sensor : ");
+  Serial.println(estado);  
+  switch(estado)
+  {
+  case 0:
+    
+    Serial.println("Caixa Cheia");
+    digitalWrite(led_vermelho, 0);
+    digitalWrite(led_verde, 1);
+    digitalWrite(rele, 0);
+
+    
+    //code para abrir valvula pelo tempo do delay….
+    delay(5000); //DELAY DE ACORDO COM O TAMANHO DO RECIPIENTE (CALCULAR)
+    //code para mandar para o java que a valvula foi aberta.
+    
+    break;        
+  case 1:
+    
+    Serial.println("Caixa vazia");
+    digitalWrite(led_vermelho, 1);
+    digitalWrite(led_verde, 0);
+    digitalWrite(rele, 1);
+    break;
+  }
+  delay(1000); //SOME DELAY
+}
