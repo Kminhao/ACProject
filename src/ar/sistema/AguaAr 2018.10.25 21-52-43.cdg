@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AguaAr">
+  <ClassDiagramComponents>
+    <Class name="Ar" package="ar.sistema" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="marca" type="String" visibility="private"/>
+        <Field name="localizacao" type="String" visibility="private"/>
+        <Field name="porte" type="String" visibility="private"/>
+        <Field name="eficiencia" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getMarca" returnType="String" visibility="public"/>
+        <Method name="setMarca" returnType="void" visibility="public">
+          <Argument type="String" name="marca"/>
+        </Method>
+        <Method name="getLocalizacao" returnType="String" visibility="public"/>
+        <Method name="setLocalizacao" returnType="void" visibility="public">
+          <Argument type="String" name="localizacao"/>
+        </Method>
+        <Method name="getPorte" returnType="String" visibility="public"/>
+        <Method name="setPorte" returnType="void" visibility="public">
+          <Argument type="String" name="porte"/>
+        </Method>
+        <Method name="getEficiencia" returnType="String" visibility="public"/>
+        <Method name="setEficiencia" returnType="void" visibility="public">
+          <Argument type="String" name="eficiencia"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Arduino" package="ar.sistema" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="litros" type="double" visibility="private"/>
+        <Field name="litragemTotal" type="double" visibility="private"/>
+        <Field name="calendario" type="Calendar" visibility="private"/>
+        <Field name="hora" type="int" visibility="private"/>
+        <Field name="minuto" type="int" visibility="private"/>
+        <Field name="dia" type="int" visibility="private"/>
+        <Field name="mes" type="int" visibility="private"/>
+        <Field name="ano" type="int" visibility="private"/>
+        <Field name="dataPorExtenso" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="litro"/>
+          <Argument type="Calendar" name="data"/>
+        </Constructor>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getLitros" returnType="double" visibility="public"/>
+        <Method name="setLitros" returnType="void" visibility="public">
+          <Argument type="double" name="litros"/>
+        </Method>
+        <Method name="getHora" returnType="int" visibility="public"/>
+        <Method name="setHora" returnType="void" visibility="public">
+          <Argument type="int" name="hora"/>
+        </Method>
+        <Method name="getMinuto" returnType="int" visibility="public"/>
+        <Method name="setMinuto" returnType="void" visibility="public">
+          <Argument type="int" name="minuto"/>
+        </Method>
+        <Method name="getDia" returnType="int" visibility="public"/>
+        <Method name="setDia" returnType="void" visibility="public">
+          <Argument type="int" name="dia"/>
+        </Method>
+        <Method name="getMes" returnType="int" visibility="public"/>
+        <Method name="setMes" returnType="void" visibility="public">
+          <Argument type="int" name="mes"/>
+        </Method>
+        <Method name="getAno" returnType="int" visibility="public"/>
+        <Method name="setAno" returnType="void" visibility="public">
+          <Argument type="int" name="ano"/>
+        </Method>
+        <Method name="alterarData" returnType="void" visibility="public">
+          <Argument type="Calendar" name="cal"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="JanelaSistema" package="ar.sistema" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="ar.sistema" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Relatorio" package="ar.sistema" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jPanel1" type="javax.swing.JPanel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="SerialTest" package="ar.sistema" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields>
+        <Field name="serialPort" type="SerialPort" visibility="package"/>
+        <Field name="PORT_NAMES" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="input" type="BufferedReader" visibility="private"/>
+        <Field name="output" type="OutputStream" visibility="private"/>
+        <Field name="TIME_OUT" type="int" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="DATA_RATE" type="int" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public"/>
+        <Method name="close" returnType="void" visibility="public" isSynchronized="true"/>
+        <Method name="serialEvent" returnType="void" visibility="public" isSynchronized="true">
+          <Argument type="SerialPortEvent" name="oEvent"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Sistema" package="ar.sistema" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="arduino" type="Arduino" visibility="private" isStatic="true"/>
+        <Field name="boia" type="boolean" visibility="private"/>
+        <Field name="data" type="Calendar" visibility="private"/>
+        <Field name="in" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="statusBoia" returnType="void" visibility="public">
+          <Argument type="boolean" name="boia"/>
+        </Method>
+        <Method name="valvulaAberta" returnType="void" visibility="public">
+          <Argument type="double" name="litros"/>
+        </Method>
+        <Method name="enviarRelatorio" returnType="boolean" visibility="public"/>
+        <Method name="run" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="FXMLjanelaController" package="ar.view" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="initialize" returnType="void" visibility="public">
+          <Argument type="URL" name="url"/>
+          <Argument type="ResourceBundle" name="rb"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Janela" package="ar.view" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="start" returnType="void" visibility="public">
+          <Argument type="Stage" name="stage"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="arduino" source="ar.sistema.Sistema" target="ar.sistema.Arduino" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
