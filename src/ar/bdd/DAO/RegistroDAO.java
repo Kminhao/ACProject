@@ -7,9 +7,6 @@ package ar.bdd.DAO;
 
 import ar.bdd.conexao.*;
 import ar.bdd.model.Relatorio;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
 
 public class RelatorioDAO {
 
@@ -40,6 +37,10 @@ public class RelatorioDAO {
         return b;     
         
     }
+    
+ 
+    //REVER NECESSIDADES DA CRIAÇÃO DE DELETE/UPDATE
+    
     
     
 }
